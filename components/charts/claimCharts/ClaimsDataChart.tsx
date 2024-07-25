@@ -3,10 +3,14 @@ import "../chartSetup";
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { ChartData, ChartOptions } from "chart.js";
-import "./chartSetup";
 
 interface ClaimsDataChartProps {
-  claims: { claim_id: string; claim_amount: number; claim_status: string }[];
+  claims: {
+    claim_id: string;
+    claim_amount: number;
+    claim_date: string;
+    claim_status: string;
+  }[];
 }
 
 const ClaimsDataChart: React.FC<ClaimsDataChartProps> = ({ claims }) => {
@@ -27,6 +31,15 @@ const ClaimsDataChart: React.FC<ClaimsDataChartProps> = ({ claims }) => {
     scales: {
       y: {
         beginAtZero: true,
+      },
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: "Claims Data Overview",
+        font: {
+          size: 18,
+        },
       },
     },
   };

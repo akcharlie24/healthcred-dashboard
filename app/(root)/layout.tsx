@@ -7,7 +7,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <main>
       <AuroraBackground className="z-0">
         <Navbar />
-        <div className="z-20 mx-40 pt-10">{children}</div>
+        <div className="z-20 mx-40 pt-5">{children}</div>
       </AuroraBackground>
     </main>
   );

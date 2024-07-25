@@ -23,7 +23,7 @@ const NextRepayment = () => {
         <div className="flex min-h-16 w-2/3 items-center justify-center gap-10 rounded-3xl bg-[#FF829D] p-1">
           <FiDollarSign size={38} />
           <div className="font-serif text-2xl font-semibold italic text-zinc-800">
-            <p className=""> Due Amount</p>{" "}
+            <p className=""> Due Amount</p> Rs.{" "}
             {data.amount_to_be_repaid_on_upcoming_date}{" "}
           </div>
         </div>
