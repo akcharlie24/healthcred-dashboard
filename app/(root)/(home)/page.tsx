@@ -1,3 +1,4 @@
+"use client";
 import { BillRepaymentComparisonBarChart } from "@/components/charts/BillRepaymentComparisonBarChart";
 import DisbursalsAndRepayments from "@/components/charts/DisbursalsAndRepayments";
 import { RepaymentsOverTimeLineChart } from "@/components/charts/RepaymentsOverTimeLineChart";
@@ -5,9 +6,26 @@ import TotalDueBreakdown from "@/components/charts/TotalDueBreakdown";
 import HospitalInfo from "@/components/shared/HospitalInfo";
 import NextRepayment from "@/components/shared/NextRepayment";
 import RepaymentsInfo from "@/components/shared/RepaymentsInfo";
-import { data } from "@/Data";
+import { fetchHospitalData } from "@/lib/actions/user.action";
+import { HospitalData, initialHospitalData } from "@/types/types";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [data, setData] = useState<HospitalData>(initialHospitalData);
+
+  const fetchData = async () => {
+    try {
+      const fetchedData = await fetchHospitalData();
+      setData(fetchedData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className=" flex flex-col items-center gap-4">
       <div className="flex w-full flex-wrap border border-b-gray-400">

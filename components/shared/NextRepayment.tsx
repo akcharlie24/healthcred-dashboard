@@ -1,8 +1,26 @@
-import { data } from "@/Data";
+"use client";
 import { FiDollarSign } from "react-icons/fi";
 import { FaCalendarCheck } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { HospitalData, initialHospitalData } from "@/types/types";
+import { fetchHospitalData } from "@/lib/actions/user.action";
 
 const NextRepayment = () => {
+  const [data, setData] = useState<HospitalData>(initialHospitalData);
+
+  const fetchData = async () => {
+    try {
+      const fetchedData = await fetchHospitalData();
+      setData(fetchedData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="flex">
       <div className="m-4 ml-8 flex min-h-16 w-1/4 items-center justify-center gap-10 rounded-3xl bg-[#5AB1EE] p-1">

@@ -1,7 +1,25 @@
-import { data } from "@/Data";
+"use client";
+import { fetchHospitalData } from "@/lib/actions/user.action";
+import { HospitalData, initialHospitalData } from "@/types/types";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const HospitalInfo = () => {
+  const [data, setData] = useState<HospitalData>(initialHospitalData);
+
+  const fetchData = async () => {
+    try {
+      const fetchedData = await fetchHospitalData();
+      setData(fetchedData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="z-10 flex justify-center gap-24 rounded-3xl bg-white p-2 ">
       <div className="flex flex-col items-center justify-center gap-4 font-serif ">
