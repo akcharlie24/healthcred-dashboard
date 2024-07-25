@@ -4,7 +4,7 @@ import React from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="relative overflow-hidden ">
+    <main>
       <AuroraBackground className="z-0">
         <Navbar />
         <div className="z-20 mx-40 pt-10">{children}</div>

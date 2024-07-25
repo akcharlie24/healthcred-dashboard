@@ -7,6 +7,7 @@ import {
   CategoryScale,
   LinearScale,
   TimeScale,
+  Title,
   Legend,
   Tooltip,
 } from "chart.js";
@@ -20,5 +21,6 @@ Chart.register(
   LinearScale,
   TimeScale,
   Legend,
+  Title,
   Tooltip,
 );

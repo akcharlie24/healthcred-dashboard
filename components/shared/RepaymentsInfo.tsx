@@ -1,10 +1,34 @@
 import { data } from "@/Data";
-import Image from "next/image";
+import { FiDollarSign } from "react-icons/fi";
+import { LimitUtilizationPieChart } from "../charts/LimitUtilizationPieChart";
 
 const RepaymentsInfo = () => {
   return (
-    <div className="z-10 flex flex-col justify-center  gap-24 rounded-3xl bg-white p-2 ">
-      <div className="flex w-1/2 flex-col items-center justify-center gap-4 bg-[#fb9678] font-thin "></div>
+    <div className="z-10 flex items-center justify-center gap-4 rounded-3xl bg-white p-2 ">
+      <div className="flex max-h-48 min-h-52 w-1/2 flex-col items-center gap-8 rounded-3xl bg-[#5AB1EE] p-4 font-serif text-2xl  text-black ">
+        <div className="flex justify-between gap-24">
+          <p className="pt-1 text-2xl italic">Limit Utilization</p>
+          <div className="rounded-full bg-white p-2">
+            <FiDollarSign size={40} />
+          </div>
+        </div>
+        <div className=" flex w-full flex-col items-start px-4">
+          <p className="text-4xl font-semibold">
+            ₹{data.current_limit_utilised}
+          </p>
+          <p className="text-xl text-gray-700">/{data.total_limit_allocated}</p>
+        </div>
+      </div>
+      <div className="flex h-48 min-h-72 w-1/2 items-center justify-center gap-8 rounded-3xl bg-white p-4 font-serif text-2xl text-black ">
+        <LimitUtilizationPieChart
+          currentLimitUtilisedPercentage={
+            data.current_limit_utilised_percentage
+          }
+          currentUnutilisedFundsPercentage={
+            data.current_unutilised_funds_percentage
+          }
+        />
+      </div>
     </div>
   );
 };
