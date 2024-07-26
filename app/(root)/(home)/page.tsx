@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         <div className="z-10 w-1/2 flex-1 flex-col p-4">
           <NextRepayment />
-          <div className="mt-6 flex h-80 items-center justify-center">
+          <div className=" flex h-80 items-center justify-center">
             <RepaymentsOverTimeLineChart
               amountRepaidToDate={data.amount_repaid_to_date}
               amountToBeRepaidOnUpcomingDate={
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
       <div className="z-10 flex w-full flex-wrap">
         <div className="flex min-h-80 w-1/3 flex-col items-center justify-center border border-r-gray-400">
-          <div className="flex justify-between  gap-20 text-lg italic">
+          <div className="flex justify-between  gap-20 text-sm italic">
             <div>
               <p className="font-semibold">Amount Till Date : </p> Rs.{" "}
               {data.bill_amount_discounted_to_date}
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
 
         <div className=" flex min-h-80 w-1/3 flex-col items-center justify-center border border-r-gray-400 px-2">
-          <div className="flex justify-between  gap-10 italic">
+          <div className="flex justify-between gap-10  text-sm italic">
             <div>
               <p className="font-semibold">Principal Amount : </p> Rs.{" "}
               {data.total_due}
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         <div className=" flex min-h-80 w-1/3 flex-col items-center justify-center">
-          <div className="flex justify-between  gap-10 text-lg italic">
+          <div className="flex justify-between  gap-10 text-sm italic">
             <div>
               <p className="font-semibold">Disbursals Amount : </p>
               Rs. {data.disbursals_amount}
