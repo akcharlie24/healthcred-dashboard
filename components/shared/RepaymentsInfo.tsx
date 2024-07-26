@@ -25,8 +25,8 @@ const RepaymentsInfo = () => {
     <div className="z-10 flex items-center justify-center gap-4 rounded-3xl bg-white p-2 ">
       <div className="flex max-h-48 min-h-52 w-1/2 flex-col items-center gap-8 rounded-3xl bg-[#5AB1EE] p-4 font-serif text-2xl  text-black ">
         <div className="flex justify-between gap-24">
-          <p className="pt-1 text-2xl italic">Limit Utilization</p>
-          <div className="rounded-full bg-white p-2">
+          <p className="pt-1 text-xl italic">Limit Utilization</p>
+          <div className="rounded-full bg-white p-3">
             <FiDollarSign size={40} />
           </div>
         </div>
