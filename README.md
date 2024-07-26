@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Health-Cred : Dashboard
 
-## Getting Started
+# Health-Cred
 
-First, run the development server:
+This project is a health-cred dashboard built with Next.js to display Hospital data and claims data for a given hospital.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Key Features:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Interactive dashboard showcasing hospital data.
+- Utilizes charts.js for various chart types (e.g., bar charts, line charts, etc.).
+- Fetches hospital data using Next.js server actions and Axios.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Frontend:**
 
-## Learn More
+* **Next.js:** A powerful React framework for building static and dynamic web applications having support for server side rendering.
+* **TypeScript:** Enhances developer experience with type safety and improved code maintainability.
+* **Tailwind CSS:** A utility-first CSS framework for rapid and responsive UI development.
+* **ShadCn/Ui and Aceternity UI:** Pre-built UI components for a polished and consistent look.
+* **Axios:** A promise-based HTTP client for making API requests.
 
-To learn more about Next.js, take a look at the following resources:
+## Routes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **"/"** : To display the dashboard
+* **"/claims** : To display the claims
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Getting Started:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository and move into the directory:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   git clone https://github.com/akcharlie24/healthcred-dashboard.git
+   cd healthcred-dashboard
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+This will launch Dashboard in your browser, typically at `http://localhost:3000/`.
+
+## Live Demo:
+
+Check out Health-Cred DashBoard in action at: 
+
+[https://healthcred-dashboard.vercel.app/](https://healthcred-dashboard.vercel.app/)
