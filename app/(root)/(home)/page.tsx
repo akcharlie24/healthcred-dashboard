@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className=" flex flex-col items-center gap-4">
       <div className="flex w-full flex-wrap border border-b-gray-400">
-        <div className="flex w-1/2 flex-1 flex-col gap-4 border border-r-gray-400">
+        <div className="flex w-1/2 flex-1 flex-col gap-4 border-r-gray-400">
           <HospitalInfo />
           <RepaymentsInfo />
         </div>
